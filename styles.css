@@ -16,6 +16,7 @@ a {
 
 body {
     margin-bottom: 50px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -287,9 +288,11 @@ body {
 
 #factions .faction_card_alliance:hover {
     transform: scale(1.1);
+    z-index: 1;
 }
 
 #factions .faction_card_horde:hover {
+    z-index: 1;
     transform: scale(1.1);
 }
 
