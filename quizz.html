@@ -18,11 +18,10 @@
         <a href="./index.html" class="logo"><img src="./media/wow.png" alt="WOW Project"></a> W<span>P</span></h1>
     <nav>
         <ul>
-            <li><a href="./human.html" texto="Factions">Factions</a></li>
-            <li><a href="#" texto="Classes">Classes</a></li>
-            <li><a href="#" texto="Races">Races</a></li>
-            <li><a href="#" texto="Quizz">Quizz</a></li>
-            <li><a href="#" texto="Info">Info</a></li>
+            <li><a href="./index.html" texto="Home">Home</a></li>
+            <li><a href="./human.html" texto="Races">Races</a></li>
+            <li><a href="./quizz.html" texto="Quizz">Quizz</a></li>
+            <li><a href="./info.html" texto="Info">Info</a></li>
         </ul>
     </nav>
 </header>
@@ -151,30 +150,41 @@
 
         <br><br>
         <hr>
-
+        <br><br>
 
         <!--Pergunta 4 -->
 
-        <label for="ilhas"><span>5.</span> Which colors are the most dominant in this conflict?<span>*</span> </label>
+        <label for="q4"><span>4.</span> Which colors are the most dominant in this conflict?<span>*</span> </label>
         <input type="color" id="color1" name="color2" value="#000000" required>
-        <input type="color" id="color2" name="color2" value="#000000" required> <small>click to choose</small> <br><br>
+        <input type="color" id="color2" name="color2" value="#000000" required> <strong>click to choose</strong> <br><br>
         <hr><br><br>
 
         <!--Pergunta 5-->
-        <label for="horas"><span>6.</span> How many classes can Humans specialize in?<span>*</span> </label>
-        <input type="number" id="horas" name="horas" min="0" max="5" value="0" required step="1"> <small><small><small>[Hint: check the gif]</small></small>
+        <label for="q5"><span>5.</span> How many classes can Humans specialize in?<span>*</span> </label>
+        <input type="number" id="horas" name="horas" min="0" max="5" value="0" required step="1"> <strong>[Hint: check the gif]</strong>
         </small> <br><br>
         <hr><br><br>
 
 
         <!--Pergunta 6 -->
-        <label for="jinn"><span>7.</span> In stormwind you drive in which side of the road?<span>*</span> </label><br><br>
-        <input type="radio" id="conduzEsq" name="conduz" value="Esquerdo" required>
-        <label for="conduzEsq">Left side</label>
-        <input type="radio" id="conduzDrt" name="conduz" value="Direito" required>
-        <label for="conduzDrt">Right side</label><br><br>
-        <input type="radio" id="right answer" name="conduz" value="not" required>
-        <label for="conduzDrt">You don't</label><br>
+
+
+        <label for="q6"><span>6.</span> In stormwind you drive in which side of the road?<span>*</span> </label><br><br>
+
+        <label class="radio_container" for="conduzEsq">Left side
+            <input type="radio" id="conduzEsq" name="conduz" value="Esquerdo" required>
+            <span  style="border-radius: 50%" class="checkmark"></span>
+        </label>
+
+        <label class="radio_container" for="conduzDrt">Right side
+            <input type="radio" id="conduzDrt" name="conduz" value="Direito" required>
+            <span  style="border-radius: 50%" class="checkmark"></span>
+        </label>
+
+        <label class="radio_container" for="conduzDrt">You don't
+            <input type="radio" id="rightanswer" name="conduz" value="not" required>
+            <span  style="border-radius: 50%" class="checkmark"></span>
+        </label>
 
 
 
@@ -192,95 +202,30 @@
 </section>
 
 
-<section>
-    <!--CONTRIBUIÇÕES-->
-    <br>
-    </form>
 
+<footer id="footer">
+    <div class="footerred container" id="red">
+        <div>
+            <h1 class="section_title"><span>P</span>rogramação <span>W</span>eb</h1>
+        </div>
+        <h2>Ano lectivo <span>20</span>/<span>21</span></h2>
+        <div class="footicon">
+            <div class="footitem">
+                <a href="https://www.ulusofona.pt/" target="_blank"><img src="./media/ulusofona.jpg"></a>
 
-    <form action="mailto:joaoferre195@gmail.com" method="post" name="Sugestões Quizz">
-        <fieldset>
-
-            <legend>Contributions</legend>
-
-            <label>
-                        Like the quizz?
-                        <select name="avaliação" value="N/A">
-                            <option value="N/A">N/A</option>
-                            <option value="Muito">Mucho</option>
-                            <option value="Mais ou menos">Meh</option>
-                            <option value="Péssimo">Bad</option>
-                        </select><br><br> 
-
-                            <fieldset> 
-                                <label> In case you happen to play wow, this is a work in progress site which me and my friend tried to finish in 2 days without vast knowledge of what we are doing, feel free to give some feedback: <br>
-                             
-                                    <textarea name="sugestões" rows="20" cols="50" placeholder="You can write here your feedback, plus your Character and Realm so we look you up on Raider.io"></textarea><br>
-                               
-                    </label>
-            <br><br>
-
-            <label>
-                        <span style="font-size: 80%;">Data de Visita:</span>
-                        <input type="date" id="year" name="year"  width="40px" max="2021-12-31" ><br>
-                    </label>
-
-            <label>
-                        <span style="font-size: 80%;">Autor:</span> <input type="text" name="nome" placeholder="O seu nome..." autocomplete="off" maxlength="20">
-                    </label>
-
-            <br><br>
-
-            <label>
-                  
-                        <span style="font-size: 120%;">Se quiser adicionar alguma fotografia pode as deixar aqui:</span><br><br>
-                        <input type="file" id="files" name="files" multiple><br><br> 
-                    </label>
-
-
-
-            <br><br><br><br>
-            <label> <span style="font-size: 120%;">Enviar</span> <br>
-                        <input type="image" src="img/submit-icon-.jpg" title="Submit Answers" alt="Submit" width="48" height="48">
-                            </fieldset>
-                </fieldset>
-            </form>
-
-        </section>
-
-        <section id="wordcloudSVG">
-            <!-- SVG BOTTOM MENU-->
-
-            <br><br>
-            <hr>
-
-        </section>
-
-
-
-        <footer id="footer">
-            <div class="footerred container" id="red">
-                <div>
-                    <h1 class="section_title"><span>P</span>rogramação <span>W</span>eb</h1>
-                </div>
-                <h2>Ano lectivo <span>20</span>/<span>21</span></h2>
-                <div class="footicon">
-                    <div class="footitem">
-                        <a href="https://www.ulusofona.pt/" target="_blank"><img src="./media/ulusofona.jpg"></a>
-    
-                    </div>
-                    <div class="footitem">
-                        <a href="https://worldofwarcraft.com/en-gb/character/eu/stormscale/yv%C3%AF" target="_blank"><img src="./media/accounts.png"></a>
-    
-                    </div>
-                    <div class="footitem">
-                        <a href="https://worldofwarcraft.com/en-gb/character/eu/aggra-portugu%C3%AAs/barlow" target="_blank"><img src="./media/accounts.png"></a>
-    
-                    </div>
-    
-                </div>
-                <p>-- Trabalho realizado no ambito escolar com objectivo educacional --</p>
             </div>
-    
-        </footer>
+            <div class="footitem">
+                <a href="https://worldofwarcraft.com/en-gb/character/eu/stormscale/yv%C3%AF" target="_blank"><img src="./media/accounts.png"></a>
+
+            </div>
+            <div class="footitem">
+                <a href="https://worldofwarcraft.com/en-gb/character/eu/aggra-portugu%C3%AAs/barlow" target="_blank"><img src="./media/accounts.png"></a>
+
+            </div>
+
+        </div>
+        <p>-- Trabalho realizado no ambito escolar com objectivo educacional --</p>
+    </div>
+
+</footer>
 </body>

@@ -410,15 +410,23 @@ body.redback {
     grid-template-areas: "header header header" "sidenav content anuncios" "footer footer footer";
 }
 
-@media (max-width: 760px) {
+@media screen and (max-width: 760px) {
     .estrutura {
-        grid-template-columns: 100%;
-        /* 1fr bugado */
         grid-template-areas: 'header' 'sidenav' 'content' 'anuncios' 'footer';
     }
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 700px) {
+    .estrutura {
+        grid-template-areas: 'header' 'sidenav' 'content' 'anuncios' 'footer';
+    }
+    .anuncios {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
     .estrutura {
         grid-template-areas: 'header header header' 'sidenav content content' 'sidenav anuncios anuncios' 'footer footer footer';
     }
@@ -530,7 +538,7 @@ header h1 {
     grid-area: sidenav;
     background: transparent;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr;
     grid-gap: 10px;
     padding: 10px;
 }
@@ -539,6 +547,12 @@ header h1 {
     grid-area: 1 / 1 / 2 /2;
     width: fit-content;
     margin-left: 4vw;
+}
+
+@media screen and (max-width: 1100px) {
+    .left {
+        margin-left: 1vw;
+    }
 }
 
 .right {
@@ -869,7 +883,6 @@ iframe {
 }
 
 h1.section_title {
-    margin-top: 10px;
     margin-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -889,10 +902,15 @@ fieldset {
     margin-top: 10%;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 10%;
     background-color: #3131317a;
     border-radius: 5px;
     padding: 20px;
     border-color: orangered;
+}
+
+textarea {
+    margin-top: 10px;
 }
 
 legend {
@@ -907,11 +925,19 @@ legend {
 label {
     line-height: 1rem;
     font-size: 1.6rem;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 500;
     font-style: oblique;
     color: ivory;
     letter-spacing: 1px;
+}
+
+@media screen and (max-width: 300px) {
+    label.radio_container,
+    label {
+        line-height: 20px;
+    }
 }
 
 label span {
@@ -924,6 +950,7 @@ input {
     border: none;
     border-bottom: 2px solid orangered;
     padding: 5px;
+    margin-top: 15px;
     margin-bottom: 10px;
     background-color: #4e4d4d5d;
     border-radius: 10px;
@@ -944,6 +971,10 @@ input[type=tel]:focus {
     color: rgb(15, 14, 14);
 }
 
+input[type="image"] {
+    width: auto;
+}
+
 select {
     width: 10%;
     padding: 10px 22px;
@@ -952,6 +983,26 @@ select {
     border-radius: 5px;
     color: white;
     background-color: rgba(66, 66, 66, 0.5);
+}
+
+strong {
+    color: ivory;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: black;
+    color: ivory;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: orangered;
+    color: black;
+}
+
+.inner {
+    width: 50vw;
 }
 
 
@@ -1059,3 +1110,81 @@ select {
 
 
 /*----------------------------------------------------------------END OF QUIZZ ----------------------------------------------------------------*/
+
+video {
+    margin-left: 20px;
+    display: flex;
+    width: 70%;
+}
+
+
+/*INFO*/
+
+textarea {
+    resize: disable;
+    width: 90%;
+    height: 150px;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+th {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+td {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    font-size: 1.5rem;
+    background-color: orangered;
+}
+
+tr:nth-child(odd) {
+    font-size: 1.5rem;
+    color: ivory;
+    background-color: rgb(0, 75, 146);
+}
+
+.centrar .row {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    padding: 2vw;
+}
+
+.grey {
+    transition: width 2s;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.grey img {
+    width: 100%;
+    height: auto;
+}
+
+.grey:hover {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+@keyframes grey {
+    0% {
+        transform: width(250);
+    }
+    50% {
+        transform: width(225);
+    }
+    100% {
+        transform: width(160);
+    }
+}
