@@ -11,51 +11,81 @@
 </head>
 
 <body class="blueback">
-    <section class="estrutura">
+    <section class="estrutura" id="header">
         <header class="allyheader">
             <h1>
                 <a href="./index.html" class="logo"><img src="./media/wow.png" alt="WOW Project"></a> W<span>P</span></h1>
             <nav>
                 <ul>
-                    <li><a href="#" texto="Home">Home</a></li>
-                    <li><a href="#" texto="Factions">Factions</a></li>
+                    <li><a href="./index.html" texto="Home">Home</a></li>
                     <li><a href="#" texto="Classes">Classes</a></li>
-                    <li><a href="#" texto="Races">Races</a></li>
-                    <li><a href="#" texto="Quizz">Quizz</a></li>
-                    <li><a href="#" texto="Info">Info</a></li>
+                    <li><a href="./human.html" texto="Races">Races</a></li>
+                    <li><a href="./quizz.html" texto="Quizz">Quizz</a></li>
+                    <li><a href="./info.html" texto="Info">Info</a></li>
                 </ul>
             </nav>
         </header>
 
         <nav class="sidenav">
-            <ul>
-                <li class="sidenav-item">
-                    <a href="./human.html">
-                        <img src="./media/human.jpeg" alt="Human" />
-                    </a>
-                </li>
-                <li class="sidenav-item">
-                    <a href="./dwarf.html">
-                        <img src="./media/dwarf.jpeg" alt="Dwarf" />
-                    </a>
-                </li>
+            <div class="right">
+                <ul>
+                    <li class="sidenav-item">
+                        <a href="./orc.html">
+                            <img src="./media/orc.jpg" alt="Orc" />
+                        </a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a href="./troll.html">
+                            <img src="./media/troll.jpg" alt="Troll" />
+                        </a>
+                    </li>
 
-                <li class="sidenav-item">
-                    <a href="#">
-                        <img src="./media/classicon_paladin.jpg" alt="Comming Soon" />
-                    </a>
-                </li>
+                    <li class="sidenav-item">
+                        <a href="#">
+                            <img src="./media/wip.jpg" alt="Comming Soon" />
+                        </a>
+                    </li>
 
-                <li class="sidenav-item">
-                    <a href="#">
-                        <img src="./media/classicon_paladin.jpg" alt="Comming Soon" />
-                    </a>
-                </li>
-            </ul>
+                    <li class="sidenav-item">
+                        <a href="#">
+                            <img src="./media/wip.jpg" alt="Comming Soon" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="left">
+                <ul>
+                    <li class="sidenav-item">
+                        <a href="./human.html">
+                            <img src="./media/human.jpeg" alt="Human" />
+                        </a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a href="./dwarf.html">
+                            <img src="./media/dwarf.jpeg" alt="Dwarf" />
+                        </a>
+                    </li>
+
+                    <li class="sidenav-item">
+                        <a href="#">
+                            <img src="./media/wip.jpg" alt="Comming Soon" />
+                        </a>
+                    </li>
+
+                    <li class="sidenav-item">
+                        <a href="#">
+                            <img src="./media/wip.jpg" alt="Comming Soon" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
+
+
         <section class="content">
-            <div class="tituloally" id="tituloally">
+            <div class="titulo" id="azul">
                 <h1>Dwarf</h1>
                 <span>Alliance</span>
             </div>
@@ -64,10 +94,20 @@
                 The bold and courageous dwarves are an ancient race descended from the earthen—beings of living stone created by the titans when the world was young. Due to a strange malady known as the Curse of Flesh, the dwarves’ earthen progenitors underwent a transformation
                 that turned their rocky hides into soft skin. Ultimately, these creatures of flesh and blood dubbed themselves dwarves and carved out the mighty city of Ironforge in the snowy peaks of Khaz Modan.
             </p>
-            <img class="imagem-1" src="./media/gif1.mp4" alt="Animated Gif" />
+
+            <figure>
+                <img class="imagem-1" src="./media/DwarfGif25.gif" alt="Animated Gif" />
+                <figcaption>Dwarf 3D Model</figcaption>
+            </figure>
+
+            <figure>
+                <img class="imagem-2 " src="./media/dwarfCity.jpg " alt="Main City " />
+                <figcaption>Ironforge</figcaption>
+                <img class="imagem-2 " src="./media/dwarfCity.jpg " alt="Main City " />
+                <figcaption>Ironforge</figcaption>
+            </figure>
 
 
-            <img class="imagem-2" src="./media/dwarfCity.jpg" alt="Main City" />
 
             <p>
                 Encircled by jagged mountain peaks, the snowy region of Dun Morogh has been the cultural heart of Ironforge’s dwarves for ages. Not long ago, quakes roused numerous troggs from their subterranean dwellings and drove the bestial creatures toward the dwarven
@@ -81,7 +121,7 @@
             </p>
 
 
-            <ul class="atributos">
+            <ul class="atributos " id="blueLine">
                 <li>Surgiu: 12.000 anos</li>
                 <li>Tipo: Mamífero</li>
                 <li>Idade Média: 13 anos</li>
@@ -91,7 +131,7 @@
             </ul>
 
 
-            <div class="informacoes">
+            <div class="informacoes ">
                 <p>
                     Distinguished by their shaggy coats and massive horns, Barak Tor’ol mountain rams are simple yet proud animals whose fearlessness is matched only by that of their dwarven masters. What these good-natured animals lack in ferocity, they compensate with
                     uncommon durability and strength. Recently, other types of rams have been discovered in the frigid continent of Northrend, yet the amicable species native to Dun Morogh and its surrounding regions is still preferred by Ironforge’s
@@ -100,15 +140,19 @@
 
             </div>
 
-            <img class="imagem-3 col-wide" src="./media/dwarfMount.jpg" alt="WIDE IMG" />
+            <img class="imagem-3 col-wide " src="./media/dwarfMount.jpg " alt="WIDE IMG " />
+
+
+
+
         </section>
 
-        <div class="anuncios">
-            <div class="anuncios-item">
-                <img src="./media/gif1.mp4" alt="Anúncio 1" />
+        <div class="anuncios ">
+            <div class="anuncios-item ">
+                <img src="./media/gif1.mp4 " alt="Anúncio 1 " style="width: 100px;" />
             </div>
-            <div class="anuncios-item">
-                <img src="img/anuncio-2.jpg" alt="Anúncio 2" />
+            <div class="anuncios-item ">
+                <img src="img/anuncio-2.jpg " alt="Anúncio 2 " />
             </div>
         </div>
 
@@ -117,12 +161,14 @@
     </section>
 
 
-    <footer id="footer">
-        <div class="footer container">
+    <!--Start Footer-->
+
+    <footer class="footer" id="footer">
+        <div class="footerblue container" id="azul">
             <div>
-                <h1 class="section_title"><span>P</span>rogramação <span>W</span>eb</h1>
+                <h1 class="section_title" id="azul"><span>P</span>rogramação <span>W</span>eb</h1>
             </div>
-            <h2>Ano lectivo <span>20</span>/<span>21</span></h2>
+            <h2 id="azul">Ano lectivo <span>20</span>/<span>21</span></h2>
             <div class="footicon">
                 <div class="footitem">
                     <a href="https://www.ulusofona.pt/" target="_blank"><img src="./media/ulusofona.jpg"></a>
@@ -142,6 +188,7 @@
         </div>
 
     </footer>
+    <!--End Footer-->
 
 
 </body>

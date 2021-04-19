@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio&family=Karantina&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +14,11 @@ html {
 
 a {
     text-decoration: none;
+    color: orangered;
+}
+
+li {
+    list-style: none;
 }
 
 .mainPage body {
@@ -166,10 +172,10 @@ body.redback {
 }
 
 
-/* End of Intro Section*/
+/* ----------------------------------------------------------------End of Intro Section----------------------------------------------------------------*/
 
 
-/* Start of About Section*/
+/* ----------------------------------------------------------------Start of About Section----------------------------------------------------------------*/
 
 #about {
     background-color: black;
@@ -216,10 +222,10 @@ body.redback {
 }
 
 
-/* End of About Section*/
+/* ----------------------------------------------------------------End of About Section----------------------------------------------------------------*/
 
 
-/* Start of Factions Section*/
+/* ----------------------------------------------------------------Start of Factions Section----------------------------------------------------------------*/
 
 #factions {
     background-color: black;
@@ -371,7 +377,10 @@ body.redback {
 }
 
 
-/* End of Factions Section*/
+/* ----------------------------------------------------------------End of Factions Section----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------MAIN PAGE END ----------------------------------------------------------------*/
 
 .gifTest {
     display: flexbox;
@@ -382,22 +391,17 @@ body.redback {
 }
 
 
-/*----------------------------------------------------------------MAIN PAGE END ----------------------------------------------------------------*/
-
-
 /*----------------------------------------------------------------RACES PAGE START ----------------------------------------------------------------*/
 
-li {
-    list-style: none;
-}
-
-#estrutura .img {
+.estrutura .content img {
+    max-width: 100%;
+    width: 100%;
     border-radius: 5px;
     display: block;
 }
 
 
-/* GRID GERAL */
+/* ----------------------------------------------------------------GRID GERAL---------------------------------------------------------------- */
 
 .estrutura {
     display: grid;
@@ -406,7 +410,7 @@ li {
     grid-template-areas: "header header header" "sidenav content anuncios" "footer footer footer";
 }
 
-@media (max-width: 200px) {
+@media (max-width: 760px) {
     .estrutura {
         grid-template-columns: 100%;
         /* 1fr bugado */
@@ -427,7 +431,7 @@ li {
 }
 
 
-/* HEADER */
+/* ----------------------------------------------------------------HEADER ----------------------------------------------------------------*/
 
 header {
     border-bottom: solid 3px;
@@ -437,35 +441,6 @@ header {
     align-items: center;
     display: grid;
     grid-template-columns: 1fr auto;
-}
-
-header.allyheader {
-    border-color: rgb(0, 174, 255);
-}
-
-header.hordeheader {
-    border-color: orangered;
-}
-
-header h1 {
-    font-family: 'Zilla Slab Highlight';
-    margin: 25px 50px 75px;
-    /*top margin is 25px - right and left margins are 50px - bottom margin is 75px*/
-    text-indent: 20px;
-    padding: 5px;
-    font-size: 3rem;
-    margin: 10px;
-    line-height: 2.5rem;
-    font-weight: 300px;
-    letter-spacing: 0.05rem;
-}
-
-header.allyheader h1 {
-    color: rgb(0, 174, 255);
-}
-
-header.hordeheader h1 {
-    color: orangered;
 }
 
 logo {
@@ -488,20 +463,53 @@ header nav a {
     transition: 0.1s;
 }
 
+header li+li {
+    margin-left: 30px;
+}
+
+#header .allyheader {
+    border-color: rgb(0, 174, 255);
+}
+
+header.allyheader h1 {
+    color: rgb(0, 174, 255);
+}
+
 header.allyheader nav a:hover {
     background: rgb(0, 174, 255);
+}
+
+header.hordeheader {
+    border-color: orangered;
 }
 
 header.hordeheader nav a:hover {
     background: orangered;
 }
 
-header li+li {
-    margin-left: 30px;
+header.hordeheader h1 {
+    color: orangered;
+}
+
+header h1 {
+    font-family: 'Zilla Slab Highlight';
+    margin: 25px 50px 75px;
+    /*top margin is 25px - right and left margins are 50px - bottom margin is 75px*/
+    text-indent: 20px;
+    padding: 5px;
+    font-size: 3rem;
+    margin: 10px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: 0.05rem;
+    display: inline;
 }
 
 @media (max-width: 760px) {
-    .header {
+    .allyheader {
+        grid-template-columns: auto;
+    }
+    .hordeheader {
         grid-template-columns: auto;
     }
     .logo {
@@ -521,7 +529,22 @@ header li+li {
 .sidenav {
     grid-area: sidenav;
     background: transparent;
-    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.left {
+    grid-area: 1 / 1 / 2 /2;
+    width: fit-content;
+    margin-left: 4vw;
+}
+
+.right {
+    grid-area: 1 / 2 / 2 /3;
+    width: fit-content;
+    margin-right: 4vw;
 }
 
 .sidenav ul {
@@ -541,6 +564,7 @@ header li+li {
     transition: 0.1s ease-out;
     align-items: center;
     padding: 3px;
+    transition: 0.1s ease-out;
 }
 
 .sidenav-item a:hover {
@@ -551,22 +575,20 @@ header li+li {
 
 /* CONTENT */
 
-.content {
-    grid-area: content;
-    margin: 0 auto;
-    background: rgb(31, 30, 30);
-}
-
 
 /* GRID DO CONTENT */
 
 .content {
     display: grid;
-    max-width: 900px;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
     padding: 30px;
-    box-shadow: orangered;
+}
+
+.content {
+    grid-area: content;
+    margin: 0 auto;
+    background: rgb(31, 30, 30);
 }
 
 @media (max-width: 600px) {
@@ -580,18 +602,31 @@ header li+li {
     grid-column: 1 / -1;
 }
 
+.img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+figcaption {
+    color: ivory;
+    font-size: 1em;
+    font-style: bold;
+    text-align: center;
+    font: 'Karantina';
+}
+
 .imagem-1 {
     /* span 2 significa que essa imagem vai ocupar 2 linhas e será alinhada no final sempre. */
-    grid-row: span 1;
-    margin-bottom: auto;
-    margin-top: auto;
+    grid-row: span 2;
     align-self: end;
+    padding: 0px 0px 5px;
 }
 
 .imagem-2 {
-    margin-bottom: auto;
-    margin-top: auto;
     align-self: end;
+    padding: 0px 0px 5px;
 }
 
 
@@ -601,17 +636,15 @@ header li+li {
     margin: 25px 50px 75px;
     /*top margin is 25px - right and left margins are 50px - bottom margin is 75px*/
     text-indent: 20px;
+    text-align: justify;
     padding-bottom: 20px;
     color: white;
     font-size: 1.4rem;
     margin: 10px;
+    line-height: 2rem;
     line-height: 2.5rem;
-    font-weight: 300px;
-    letter-spacing: 0.05rem;
-}
-
-p.destaque {
-    color: orangered;
+    letter-spacing: 0.1rem;
+    font: 'Karantina';
 }
 
 .informacoes p+p {
@@ -621,15 +654,15 @@ p.destaque {
 
 /* TITULO */
 
-.tituloally {
+#azul {
     color: rgb(0, 75, 146);
 }
 
-.titulohorde {
+#red {
     color: orangered;
 }
 
-.titulohorde h1 {
+.titulo h1 {
     font-family: monospace;
     letter-spacing: 0.2rem;
     font-size: 8em;
@@ -638,22 +671,15 @@ p.destaque {
     align-items: center;
 }
 
-.tituloally h1 {
-    font-family: monospace;
-    letter-spacing: 0.2rem;
-    font-size: 8em;
-    font-weight: 700;
-    line-height: 1;
-    align-items: center;
+#azul {
+    color: (0, 174, 255);
 }
 
-.tituloally span {
-    color: ivory;
-    font-size: 2em;
-    font-style: italic;
+#red {
+    color: orangered;
 }
 
-.tituloahorde>span {
+.titulo span {
     color: ivory;
     font-size: 2em;
     font-style: italic;
@@ -673,11 +699,15 @@ p.destaque {
 .atributos li {
     color: white;
     font-family: Courier, monospace;
-    font-size: 1.125em;
+    font-size: 1.5em;
     padding: 15px;
 }
 
-.atributos li+li {
+#redLine.atributos li+li {
+    border-top: 2px solid orangered;
+}
+
+#blueLine.atributos li+li {
     border-top: 2px solid #006eff;
 }
 
@@ -693,7 +723,10 @@ p.destaque {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     align-content: start;
     justify-content: space-around;
-    margin-right: 100%;
+}
+
+iframe {
+    width: 240px;
 }
 
 
@@ -706,9 +739,18 @@ p.destaque {
     background: rgb(31, 30, 30);
 }
 
-.footer {
+.footerred {
     border-top: solid 3px;
     border-color: orangered;
+    min-height: 100px;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.footerblue {
+    border-top: solid 3px;
+    border-color: rgb(0, 174, 255);
     min-height: 100px;
     flex-direction: column;
     padding-top: 5px;
@@ -718,26 +760,34 @@ p.destaque {
 #footer .section_title {
     padding-top: 10px;
     padding-bottom: 20px;
-    margin-bottom: 20px;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 300px;
     color: ivory;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-align: center;
+    text-decoration: underline ivory;
 }
 
-#footer .section_title span {
+#red .section_title span {
     color: orangered;
 }
 
-#footer h2 span {
+#azul .section_title span {
+    color: rgb(0, 174, 255);
+}
+
+#azul h2 span {
+    color: rgb(0, 174, 255);
+}
+
+#red h2 span {
     color: orangered;
 }
 
 #footer h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500px;
     color: ivory;
     margin-bottom: 10px;

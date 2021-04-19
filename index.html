@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="authors" content=" JEFF FROM THE OVERWATCH TEAM">
+    <meta name="keywords" content="wow, mmo, mazing, humongus world, worldofwarcraft, best, game">
+    <meta name="description" content="Website acerca de um dos melhores mmo alguma vez criados, e também um dos mais antigos. Website criado no decorrer de uma unidade curricular">
+    <meta name="disclaimer" content="toda a informação disponibilizada no website foi obtida em fontes oficias do jogo">
+
+    <title>WOW PROJECT INDEX</title>
     <link rel="stylesheet" href="styles.css" />
+
     <title>WoW Project</title>
     <link rel="shortcut icon" type="img/x-icon" href="./media/icon.png" />
 </head>
@@ -14,18 +21,21 @@
 
     <!--Header Section-->
     <header class="hordeheader">
-        <h1>
-            <a href="./index.html" class="logo"><img src="./media/wow.png" alt="WOW Project"></a> W<span>P</span></h1>
+
+        <a href="./index.html" class="logo"><img src="./media/wow.png" alt="WOW Project">
+            <h1> W<span>P</span></h1>
+        </a>
         <nav>
             <ul>
-                <li><a href="#" texto="Factions">Factions</a></li>
+                <li><a href="./index.html" texto="Home">Home</a></li>
                 <li><a href="#" texto="Classes">Classes</a></li>
-                <li><a href="#" texto="Races">Races</a></li>
-                <li><a href="#" texto="Quizz">Quizz</a></li>
-                <li><a href="#" texto="Info">Info</a></li>
+                <li><a href="./human.html" texto="Races">Races</a></li>
+                <li><a href="./quizz.html" texto="Quizz">Quizz</a></li>
+                <li><a href="./info.html" texto="Info">Info</a></li>
             </ul>
         </nav>
     </header>
+
 
     <!--END of Intro Section-->
 
@@ -47,7 +57,7 @@
 
     <!--Start About-->
 
-    <section id="about">
+    <main id="about">
         <div class="about container">
             <h1 class="section_title"><span>A</span>bout the <span>Game</span></h1>
             <div class="borderTest">
@@ -60,13 +70,13 @@
                     house that functions in a similar way to eBay.</p>
             </div>
         </div>
-    </section>
+    </main>
 
     <!--End About-->
 
     <!--Start Factions-->
 
-    <section id="factions">
+    <article id="factions">
         <div class="factions_container">
             <div class="factions_top">
                 <h1 class="section_title">Fact<span>i</span>ons</h1>
@@ -79,7 +89,10 @@
             <div class="factions_bottom">
                 <div class="faction_card_horde">
                     <div class="insignia">
-                        <img src="./media/hordeLogo.png" />
+                        <figure>
+                            <img src="./media/hordeLogo.png" alt="Horde Insignia" />
+                        </figure>
+
                     </div>
 
                     <div class="description">
@@ -89,13 +102,16 @@
                             and prosper in a land that has come to hate them. In the Horde, action and strength are valued above diplomacy, and its leaders earn respect by the blade, wasting no time with politics.
                         </p>
 
-                        <a href="./classes.html" type="button" class="button">More...</a>
+                        <a href="./orc.html" type="button" class="button">More...</a>
                     </div>
                 </div>
 
                 <div class="faction_card_alliance">
                     <div class="insignia">
-                        <img src="./media/allianceLogo.png" />
+                        <figure>
+                            <img src="./media/allianceLogo.png" alt="Horde Insignia" />
+                        </figure>
+
                     </div>
 
                     <div class="description">
@@ -105,18 +121,18 @@
                             are champions of justice, hope, knowledge, and faith. In a time when chaos and uncertainty reign, the Alliance remains steadfast in its determination to bring light to the darkest corners of the world.
                         </p>
 
-                        <a href="./dwarf.html" type="button" class="button">More...</a>
+                        <a href="./human.html" type="button" class="button">More...</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </article>
 
     <!--End Factions-->
     <!--Start Footer-->
 
     <footer id="footer">
-        <div class="footer container">
+        <div class="footerred container" id="red">
             <div>
                 <h1 class="section_title"><span>P</span>rogramação <span>W</span>eb</h1>
             </div>
